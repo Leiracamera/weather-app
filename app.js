@@ -1,5 +1,21 @@
-// app.js
-console.log("Fetching weather data...");
+// Create a mapping of weather descriptions to emojis
+const weatherEmojiMap = {
+    "Sunny": "🌞",
+    "Partly Sunny": "🌤️",
+    "Mostly Sunny": "🌞",
+    "Cloudy": "☁️",
+    "Partly Cloudy": "🌤️",
+    "Mostly Cloudy": "☁️",
+    "Rain": "🌧️",
+    "Showers": "🌦️",
+    "Thunderstorm": "⛈️",
+    "Snow": "❄️",
+    "Fog": "🌫️",
+    "Patchy Fog": "🌫️",
+    "Patchy Fog then Mostly Sunny": "🌫️ 🌞",
+    "Partly Cloudy then Patchy Fog": "🌤️ 🌫️",
+    "Clear": "🌟"
+  };
 
 // Latitude and longitude for Los Angeles
 const lat = 34.0980;
@@ -43,12 +59,15 @@ fetch(`https://api.weather.gov/points/${lat},${lon}`)
       const options = { weekday: 'long' }; // Display the day (e.g., "Monday")
       const dayOfWeek = date.toLocaleDateString(undefined, options);
 
+      // Get the corresponding emoji for the weather description
+      const weatherEmoji = weatherEmojiMap[description] || ""; // Default to no emoji if not found
+
       // Add the weather details for each period to the HTML string
       weatherHtml += `
         <div class="forecast-period">
-          <p><strong>${dayOfWeek}</strong></p>
-          <p>Max: ${maxTempF}°F (${maxTempC}°C), Min: ${minTempF}°F (${minTempC}°C)</p>
-          <p>${description}</p>
+            <p><strong>${dayOfWeek}</strong></p>
+            <p>Max: ${maxTempF}°F (${maxTempC}°C), Min: ${minTempF}°F (${minTempC}°C)</p>
+            <p>${weatherEmoji} ${description}</p>
         </div>
       `;
     }
