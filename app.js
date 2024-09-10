@@ -14,6 +14,7 @@ const weatherEmojiMap = {
     "Patchy Fog": "🌫️",
     "Patchy Fog then Mostly Sunny": "🌫️ 🌞",
     "Partly Cloudy then Patchy Fog": "🌤️ 🌫️",
+    "Patchy Fog then Partly Sunny": "🌫️ 🌤️",
     "Clear": "🌟"
   };
 
