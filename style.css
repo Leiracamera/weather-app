@@ -1,0 +1,57 @@
+/* External stylesheet: styles.css */
+
+/* Reset some default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set up the body with nice typography and centering */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5; /* Light background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Weather Data title styling */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Container for the weather information */
+  #weather {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Restrict width for bigger screens */
+  }
+  
+  /* Style the temperature display */
+  #weather p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  /* Add some spacing to the page */
+  body, html {
+    padding: 10px;
+  }
+  
+  /* Make sure it looks good on mobile devices */
+  @media (max-width: 768px) {
+    #weather {
+      width: 90%; /* Take up most of the width on small screens */
+    }
+  }
+  
