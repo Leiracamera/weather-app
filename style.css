@@ -16,14 +16,24 @@
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Stack elements vertically */
-    height: 100vh;
-    text-align: center;
+    min-height: 100vh;
     padding: 20px;
+    text-align: center;
   }
   
   /* Weather Data title styling */
   h1 {
     font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-style: italic;
+    font-weight: lighter;
+    margin-bottom: 20px;
+  }
+
+  #location {
     margin-bottom: 20px;
   }
   
@@ -37,10 +47,32 @@
     max-width: 400px; /* Restrict width for bigger screens */
   }
   
-  /* Style the temperature display */
-  #weather p {
+  /* Style each forecast period */
+  .forecast-period {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Highlight on hover for better UX */
+  .forecast-period:hover {
+    background-color: #e8f0fe; /* Light blue on hover */
+  }
+  
+  /* Style the day and description */
+  .forecast-period p strong {
     font-size: 18px;
-    margin: 10px 0;
+    color: #333;
+  }
+  
+  /* Temperature and description styling */
+  .forecast-period p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
   }
   
   /* Add some spacing to the page */

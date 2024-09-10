@@ -2,14 +2,17 @@
 console.log("Fetching weather data...");
 
 // Latitude and longitude for Los Angeles
-const lat = 34.0907;
-const lon = -118.3266;
+const lat = 34.0980;
+const lon = -118.3295;
 
 // Fetch weather data for the location
 fetch(`https://api.weather.gov/points/${lat},${lon}`)
   .then(response => response.json())
   .then(data => {
     const forecastUrl = data.properties.forecast; // Extract the forecast URL
+
+    // Display the location
+    document.getElementById('location').innerHTML = `Hollywood, Los Angeles, CA`;
 
     // Fetch the actual forecast using the forecast URL
     return fetch(forecastUrl);
