@@ -9,4 +9,4 @@ during a heatwave is the temperature.
 
 The app is built with Javascript, using the National Weather Service (NWS) API to access up to 5 days of weather, showing users the max and min temperatures forecast. I kept the design simple, just providing the key information needed, but added a few emojis that dynamically match the weather description for a fun user experience. I have added the app as a widget to my iPhone for easy access but would love to build it into an actual iPhone app one day as my programming skills expand. 
 
-For now you can visit the app here: 
+For now you can visit the app here: https://leiracamera.github.io/weather-app/
